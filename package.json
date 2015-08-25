@@ -17,7 +17,11 @@
     "write",
     "flux"
   ],
-  "author": "Emil Ahlbäck",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mull/alt-mutators.git"
+  },
+  "author": "Emil Ahlbäck <e.ahlback@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "alt": "~0.17.1"

@@ -29,7 +29,7 @@ function registerMutator(mutatorDef) {
         return (x) => {
           const fire = () => {
             loadCounter -= 1
-            action(x, action, args)
+            action(args)
             if (isError) throw x
           }
           return this.alt.trapAsync ? (() => fire()) : fire()

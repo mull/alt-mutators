@@ -23,12 +23,11 @@ function registerMutator(mutatorDef) {
         throw new Error(`${methodName} only accepts an object as its sole argument`)
       }
 
-      args.state = this.getInstance().getState()
-
       const makeActionHandler = (action, isError) => {
         return (x) => {
           const fire = () => {
             loadCounter -= 1
+            args.result = x
             action(args)
             if (isError) throw x
           }

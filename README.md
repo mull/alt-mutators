@@ -4,7 +4,7 @@
 # Usage
 Add the `registerMutator` function by decorating your store with the `@mutator` function. Then pass it the mutator definition in your constructor:
 
-```
+```js
 import mutator from "alt-mutators";
 
 const mutatorDefinition = {
@@ -45,7 +45,7 @@ export default alt.createStore(TodoStore);
 
 This adds a public method to your alt store called `createTodo`. Usage from a view might look something like this:
 
-```
+```js
 import TodoStore from "./TodoStore";
 
 class SomeView extends React.Component {

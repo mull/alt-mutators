@@ -1,6 +1,6 @@
 {
   "name": "alt-mutators",
-  "version": "0.0.1-alpha2",
+  "version": "0.0.1-alpha3",
   "description": "Mutators for alt with a familiar API.",
   "main": "lib",
   "scripts": {

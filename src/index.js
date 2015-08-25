@@ -19,7 +19,7 @@ function registerMutator(mutatorDef) {
     })
 
     publicMethods[methodName] = (args) => {
-      if (args === Object(args)) {
+      if (args !== Object(args)) {
         throw new Error(`${methodName} only accepts an object as its sole argument`)
       }
 

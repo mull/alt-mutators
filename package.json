@@ -1,0 +1,35 @@
+{
+  "name": "alt-mutators",
+  "version": "0.0.1-alpha",
+  "description": "Mutators for alt with a familiar API.",
+  "main": "lib",
+  "scripts": {
+    "build": "npm run transpile",
+    "lint": "eslint src",
+    "prepublish": "npm run lint && npm run build",
+    "transpile": "babel src/ --out-dir lib"
+  },
+  "keywords": [
+    "alt",
+    "async",
+    "api",
+    "mutators",
+    "write",
+    "flux"
+  ],
+  "author": "Emil Ahlbäck",
+  "license": "ISC",
+  "dependencies": {
+    "alt": "~0.17.1"
+  },
+  "devDependencies": {
+    "babel": "5.6.14",
+    "babel-core": "5.6.15",
+    "babel-eslint": "3.1.18",
+    "babel-loader": "^5.1.4",
+    "babelify": "6.1.2",
+    "eslint": "^0.24.0",
+    "istanbul": "^0.3.14",
+    "webpack": "^1.9.12"
+  }
+}

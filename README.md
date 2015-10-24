@@ -65,8 +65,52 @@ class SomeView extends React.Component {
 ```
 
 
+### Using the result
+The Promise returned by the mutator will resolve with 
+
+1. The object send to the mutator's write function
+2. The result of the promise that the mutator returned
+
+So for example if this is the call to a mutator
+
+```js
+TodoStore.createTodo({todo: {title: "Write better docs"}});
+```
+
+Then the mutator will receive
+
+```js
+write({state, todo}) {
+    return methodReturningAPromise(todo);
+}
+```
+
+Then the promise returned from calling the mutator method on the store will resolve to
+
+```js
+{
+    state: {todos: []}                   // same object the mutator received,
+    todo:  {title: "Write better docs"}  // same object the mutator received,
+    result: {
+        id: 1, 
+        title: "Write better docs"
+    } // whatever the promise returned by the mutator resolves to
+}
+```
+
+With that in mind you can comfortably listen to the promise after calling your store and (preferably) query your store:
+
+```js
+TodoStore
+    .createTodo(data)
+    .then((data) => {
+        const createdTodo = data.result;
+        console.log("The id of the todo is: ", todo.id);
+    });
+```
+
 ## Feedback
-Please leave feedback in an issue or (on twitter.)[twitter.com/mullsork]
+Please leave feedback in an issue or (on twitter to @mullsork.)[twitter.com/mullsork]
 
 
 

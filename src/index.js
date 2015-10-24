@@ -30,6 +30,7 @@ function registerMutator(mutatorDef) {
             args.result = x
             action(args)
             if (isError) throw x
+            return args
           }
           return this.alt.trapAsync ? (() => fire()) : fire()
         }

@@ -38,7 +38,7 @@ function registerMutator(mutatorDef) {
       loadCounter += 1
       spec.writing(args)
 
-      let currentState = this.getInstance().getState()
+      const currentState = this.getInstance().getState()
       args.state = currentState
 
       return spec.write(args).then(

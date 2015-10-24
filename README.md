@@ -110,7 +110,7 @@ TodoStore
 ```
 
 ## Feedback
-Please leave feedback in an issue or (on twitter to @mullsork.)[twitter.com/mullsork]
+Please leave feedback in an issue or [on twitter to @mullsork.](https://twitter.com/mullsork)
 
 
 

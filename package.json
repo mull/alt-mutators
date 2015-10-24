@@ -23,10 +23,8 @@
   },
   "author": "Emil Ahlbäck <e.ahlback@gmail.com>",
   "license": "ISC",
-  "dependencies": {
-    "alt": "~0.17.1"
-  },
   "devDependencies": {
+    "alt", "~0.17.4",
     "babel": "5.6.14",
     "babel-core": "5.6.15",
     "babel-eslint": "3.1.18",

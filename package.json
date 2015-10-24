@@ -15,7 +15,9 @@
     "api",
     "mutators",
     "write",
-    "flux"
+    "flux",
+    "react",
+    "fetch"
   ],
   "repository": {
     "type": "git",

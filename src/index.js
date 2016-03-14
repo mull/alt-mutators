@@ -1,15 +1,15 @@
-import * as fn from 'alt/utils/functions'
+import { isFunction } from 'alt-utils/lib/functions'
 
 function registerMutator(mutatorDef) {
   let loadCounter = 0
 
-  const asyncMethods = fn.isFunction(mutatorDef)
+  const asyncMethods = isFunction(mutatorDef)
     ? mutatorDef(this.alt)
     : mutatorDef
 
   const toExport = Object.keys(asyncMethods).reduce((publicMethods, methodName) => {
     const desc = asyncMethods[methodName]
-    const spec = fn.isFunction(desc) ? desc(this) : desc
+    const spec = isFunction(desc) ? desc(this) : desc
 
     const validHandlers = ['success', 'error', 'writing']
     validHandlers.forEach((handler) => {
